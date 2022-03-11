@@ -8,13 +8,25 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+// Android Modules
 const {MessageFromAndroidNative, IsAndroidEmulator} = NativeModules;
+
+// iOs Modules
+const {MessageFromIosNative, isIosEmulator} = NativeModules;
 
 const androidAlertHandle = () =>
   MessageFromAndroidNative.show((text: string) => Alert.alert(text));
 
 const isAndroidEmulatorHandle = () =>
   IsAndroidEmulator.get((isEmulator: boolean) =>
+    Alert.alert(isEmulator.toString()),
+  );
+
+const iosAlertHandle = () =>
+  MessageFromIosNative.getMessage((text: string) => Alert.alert(text));
+
+const isIosEmulatorHandle = () =>
+  isIosEmulator.get((isEmulator: boolean) =>
     Alert.alert(isEmulator.toString()),
   );
 
@@ -28,6 +40,12 @@ export const App = () => {
         style={styles.button2}
         onPress={isAndroidEmulatorHandle}>
         <Text style={styles.buttonText}>Android: Is Emulator?</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={iosAlertHandle}>
+        <Text style={styles.buttonText}>iOs: Native Message</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button2} onPress={isIosEmulatorHandle}>
+        <Text style={styles.buttonText}>iOs: Is Emulator?</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );

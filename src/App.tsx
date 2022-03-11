@@ -12,7 +12,7 @@ import {
 const {MessageFromAndroidNative, IsAndroidEmulator} = NativeModules;
 
 // iOs Modules
-const {MessageFromIosNative, isIosEmulator} = NativeModules;
+const {MessageFromIosNative, IsIosEmulator} = NativeModules;
 
 const androidAlertHandle = () =>
   MessageFromAndroidNative.show((text: string) => Alert.alert(text));
@@ -26,8 +26,8 @@ const iosAlertHandle = () =>
   MessageFromIosNative.getMessage((text: string) => Alert.alert(text));
 
 const isIosEmulatorHandle = () =>
-  isIosEmulator.get((isEmulator: boolean) =>
-    Alert.alert(isEmulator.toString()),
+  IsIosEmulator.get((isEmulator: number) =>
+    Alert.alert((!!isEmulator).toString()),
   );
 
 export const App = () => {
@@ -37,14 +37,16 @@ export const App = () => {
         <Text style={styles.buttonText}>Android: Native Message</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        style={styles.button2}
+        style={[styles.button, styles.redButton]}
         onPress={isAndroidEmulatorHandle}>
         <Text style={styles.buttonText}>Android: Is Emulator?</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={iosAlertHandle}>
         <Text style={styles.buttonText}>iOs: Native Message</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button2} onPress={isIosEmulatorHandle}>
+      <TouchableOpacity
+        style={[styles.button, styles.redButton]}
+        onPress={isIosEmulatorHandle}>
         <Text style={styles.buttonText}>iOs: Is Emulator?</Text>
       </TouchableOpacity>
     </SafeAreaView>
@@ -60,14 +62,11 @@ const styles = StyleSheet.create({
   button: {
     marginBottom: 5,
     padding: 10,
+    borderRadius: 10,
     backgroundColor: 'teal',
-    borderRadius: 10,
   },
-  button2: {
-    marginBottom: 5,
-    padding: 10,
+  redButton: {
     backgroundColor: 'tomato',
-    borderRadius: 10,
   },
   buttonText: {
     color: 'white',

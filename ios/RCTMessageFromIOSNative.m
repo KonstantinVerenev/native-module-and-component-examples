@@ -9,7 +9,6 @@
 
 @implementation RCTMessageFromIOSNative
 
-// To export a module named RCTCalendarModule
 RCT_EXPORT_MODULE(MessageFromIosNative);
 
 RCT_EXPORT_METHOD(getMessage:(RCTResponseSenderBlock)callback)

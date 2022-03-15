@@ -1,18 +1,17 @@
 import React from 'react';
 import {
   Alert,
-  NativeModules,
   SafeAreaView,
   StyleSheet,
   Text,
   TouchableOpacity,
 } from 'react-native';
-
-// Android Modules
-const {MessageFromAndroidNative, IsAndroidEmulator} = NativeModules;
-
-// iOs Modules
-const {MessageFromIosNative, IsIosEmulator} = NativeModules;
+import {
+  IsAndroidEmulator,
+  IsIosEmulator,
+  MessageFromAndroidNative,
+  MessageFromIosNative,
+} from './nativeModules';
 
 const androidAlertHandle = () =>
   MessageFromAndroidNative.show((text: string) => Alert.alert(text));

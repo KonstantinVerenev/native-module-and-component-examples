@@ -1,4 +1,4 @@
-package com.nativemodulesandcomponents;
+package com.nativemodulesandcomponents.nativemodules;
 
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 import android.os.Build;
 
 public class IsEmulatorModule extends ReactContextBaseJavaModule {
-    IsEmulatorModule(ReactApplicationContext context) {
+    public IsEmulatorModule(ReactApplicationContext context) {
         super(context);
     }
 

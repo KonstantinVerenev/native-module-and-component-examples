@@ -1,4 +1,4 @@
-package com.nativemodulesandcomponents;
+package com.nativemodulesandcomponents.nativemodules;
 
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class MessageFromNativeModule extends ReactContextBaseJavaModule {
-    MessageFromNativeModule(ReactApplicationContext context) {
+    public MessageFromNativeModule(ReactApplicationContext context) {
         super(context);
     }
 

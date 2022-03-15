@@ -1,8 +1,5 @@
 //
 //  RCTIsIosEmulator.m
-//  NativeModulesAndComponents
-//
-//  Created by Kanstantsin Veraniou on 11.03.22.
 //
 
 #import "RCTIsIosEmulator.h"
@@ -23,5 +20,3 @@ RCT_EXPORT_METHOD(get:(RCTResponseSenderBlock)callback)
 }
 
 @end
-
-

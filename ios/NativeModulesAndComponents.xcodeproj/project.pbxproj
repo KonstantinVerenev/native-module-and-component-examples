@@ -14,8 +14,8 @@
 		6172F2D35A4C3AA820D92908 /* libPods-NativeModulesAndComponents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-NativeModulesAndComponents.a */; };
 		7EF68E3733C33B6898317E18 /* libPods-NativeModulesAndComponents-NativeModulesAndComponentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-NativeModulesAndComponents-NativeModulesAndComponentsTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		E3552DE527DB610F002E8C5E /* RCTMessageFromIOSNative.m in Sources */ = {isa = PBXBuildFile; fileRef = E3552DE427DB610F002E8C5E /* RCTMessageFromIOSNative.m */; };
-		E3552DE827DB67C2002E8C5E /* RCTIsIosEmulator.m in Sources */ = {isa = PBXBuildFile; fileRef = E3552DE727DB67C2002E8C5E /* RCTIsIosEmulator.m */; };
+		E35CA1F027E0C04F0019ED93 /* RCTIsIosEmulator.m in Sources */ = {isa = PBXBuildFile; fileRef = E35CA1EF27E0C04F0019ED93 /* RCTIsIosEmulator.m */; };
+		E35CA1F327E0C08D0019ED93 /* RCTMessageFromIOSNative.m in Sources */ = {isa = PBXBuildFile; fileRef = E35CA1F227E0C08D0019ED93 /* RCTMessageFromIOSNative.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +45,10 @@
 		ABFE59519B596E51CEFDCCC0 /* libPods-NativeModulesAndComponents-NativeModulesAndComponentsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NativeModulesAndComponents-NativeModulesAndComponentsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A881CF5CF3F2B244570E2A /* Pods-NativeModulesAndComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeModulesAndComponents.debug.xcconfig"; path = "Target Support Files/Pods-NativeModulesAndComponents/Pods-NativeModulesAndComponents.debug.xcconfig"; sourceTree = "<group>"; };
 		D00AAFFCFCFDA5787532823F /* Pods-NativeModulesAndComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeModulesAndComponents.release.xcconfig"; path = "Target Support Files/Pods-NativeModulesAndComponents/Pods-NativeModulesAndComponents.release.xcconfig"; sourceTree = "<group>"; };
-		E3552DE327DB610F002E8C5E /* RCTMessageFromIOSNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTMessageFromIOSNative.h; sourceTree = "<group>"; };
-		E3552DE427DB610F002E8C5E /* RCTMessageFromIOSNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTMessageFromIOSNative.m; sourceTree = "<group>"; };
-		E3552DE627DB67C2002E8C5E /* RCTIsIosEmulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTIsIosEmulator.h; sourceTree = "<group>"; };
-		E3552DE727DB67C2002E8C5E /* RCTIsIosEmulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTIsIosEmulator.m; sourceTree = "<group>"; };
+		E35CA1EE27E0C04F0019ED93 /* RCTIsIosEmulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTIsIosEmulator.h; sourceTree = "<group>"; };
+		E35CA1EF27E0C04F0019ED93 /* RCTIsIosEmulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTIsIosEmulator.m; sourceTree = "<group>"; };
+		E35CA1F127E0C08D0019ED93 /* RCTMessageFromIOSNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTMessageFromIOSNative.h; sourceTree = "<group>"; };
+		E35CA1F227E0C08D0019ED93 /* RCTMessageFromIOSNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTMessageFromIOSNative.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -92,16 +92,13 @@
 		13B07FAE1A68108700A75B9A /* NativeModulesAndComponents */ = {
 			isa = PBXGroup;
 			children = (
+				E35CA1EA27E0BFEC0019ED93 /* NativeModules */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				E3552DE327DB610F002E8C5E /* RCTMessageFromIOSNative.h */,
-				E3552DE427DB610F002E8C5E /* RCTMessageFromIOSNative.m */,
-				E3552DE627DB67C2002E8C5E /* RCTIsIosEmulator.h */,
-				E3552DE727DB67C2002E8C5E /* RCTIsIosEmulator.m */,
 			);
 			name = NativeModulesAndComponents;
 			sourceTree = "<group>";
@@ -156,6 +153,17 @@
 				1D0AE47A65C8663E3B452821 /* Pods-NativeModulesAndComponents-NativeModulesAndComponentsTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E35CA1EA27E0BFEC0019ED93 /* NativeModules */ = {
+			isa = PBXGroup;
+			children = (
+				E35CA1EE27E0C04F0019ED93 /* RCTIsIosEmulator.h */,
+				E35CA1EF27E0C04F0019ED93 /* RCTIsIosEmulator.m */,
+				E35CA1F127E0C08D0019ED93 /* RCTMessageFromIOSNative.h */,
+				E35CA1F227E0C08D0019ED93 /* RCTMessageFromIOSNative.m */,
+			);
+			path = NativeModules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,10 +428,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3552DE527DB610F002E8C5E /* RCTMessageFromIOSNative.m in Sources */,
+				E35CA1F327E0C08D0019ED93 /* RCTMessageFromIOSNative.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				E3552DE827DB67C2002E8C5E /* RCTIsIosEmulator.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				E35CA1F027E0C04F0019ED93 /* RCTIsIosEmulator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
